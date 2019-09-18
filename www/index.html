@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <!-- Begin: Basic Meta Tags -->
+        <meta charset="UTF-8" /> <!-- Set character encoding -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> <!-- Internet Explorer compatibility mode -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> <!-- For responsiveness on mobile browsers -->
+        <!-- End: Basic Meta Tags -->
+
+        <!-- Begin: Content Security Policy Meta Tags -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' data: blob: filesystem: ws: gap: cdvfile: https://ssl.gstatic.com *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; child-src *;" /> <!-- Allows control over where the resources are loaded from -->
+        <!-- End: Content Security Policy Meta Tags -->
+
+        <!-- Begin: Android Meta Tags -->
+        <!-- <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="#333333" />  --><!-- Status bar color --> 
+
+        <!-- <link rel="icon" type="image/png" sizes="192x192" href="assets/custom/favicons/android-chrome-192x192.png" />
+        <link rel="manifest" href="assets/custom/favicons/manifest.json" /> -->
+        <!-- End: Android Meta Tags -->
+
+        
+
+        
+
+        <!-- Begin: Favicons -->        
+        <!-- <link rel="icon" type="image/png" sizes="32x32" href="assets/custom/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/custom/favicons/favicon-16x16.png" />
+        <link rel="shortcut icon" href="assets/custom/favicons/favicon.ico" /> -->
+        <!-- End: Favicons -->
+
+        <!-- Begin: Stylesheets -->
+        <link rel="stylesheet" href="vendor/framework7/css/framework7.material.min.css" />
+        <link rel="stylesheet" href="vendor/framework7/css/framework7.material.colors.min.css" />
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="vendor/hamburgers/hamburgers.min.css" />
+        <link rel="stylesheet" href="vendor/material-icons/material-icons.css" />
+        
+        <link rel="stylesheet" href="css/pages.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <!-- End: Stylesheets -->
+
+        <title>Arregla Números</title>
+    </head>
+
+    <body class="layout-dark theme-bluegray">
+        <div class="statusbar-overlay"></div>
+        <div class="panel-overlay"></div>
+
+        <!-- Begin: Left Side Panel -->
+        <div class="panel panel-left panel-reveal">
+            <div class="panel-header">
+                <div class="user-info">
+                    <img src="img/user-profile.png" width="24" alt="Perfil" />
+                    <div class="user-name">Praveen Mujawdiya</div>
+                    <div class="user-location">
+                        <i class="fa fa-fw fa-group"></i>
+                        <span>Ejecutivo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-block no-hairlines no-hairlines-between">
+                <ul>
+                    <li>
+                        <a href="perfil.html" class="item-link close-panel">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <img src="img/user-profile.png" width="24" alt="Perfil" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Perfil</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link close-panel open-popup" data-popup=".popup-rate">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <img src="img/user-profile.png" width="24" alt="Perfil" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Calificar App</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link close-panel open-popup" data-popup=".popup-coment">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <img src="img/user-profile.png" width="24" alt="Perfil" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Dejar Comentario</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link close-panel" onclick="window.open('http://dimex.mx/aviso-de-privacidad/', '_system');">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <img src="img/user-profile.png" width="24" alt="Perfil" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Legal</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link close-panel" onclick="self.Utils.GotoPage('reporte_problema');">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <img src="img/user-profile.png" width="24" alt="Perfil" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ayuda y soporte</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li style="border-top:solid 1px #eee;">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <img src="img/user-profile.png" width="24" alt="Perfil" />
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Versión</div>
+                                <div class="item-after" id="VersionApp">1.0.1</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link close-panel" onclick="self.Rest.ObtenerCatalogos();">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <img src="img/user-profile.png" width="24" alt="Perfil" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Actualizar</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link close-panel" onclick="window.open('https://play.google.com/store/apps/details?id=com.aupa.dimex', '_system');">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <img src="img/user-profile.png" width="24" alt="Perfil" />Play Store">
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ir a la Play store</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li style="border-top:solid 1px #eee;">
+                        <a href="#" class="item-link close-panel" id="btnPanelSalir" onclick="gotoLogin();">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <span class="fa-stack">
+                                        <span class="fa fa-circle fa-stack-2x color-red"></span>
+                                        <span class="fa fa-sign-out fa-stack-1x fa-inverse"></span>
+                                    </span>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title color-red">Salir</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End: Left Side Panel -->
+
+        <!-- Begin: Right Side Panel -->
+        <div class="panel panel-right panel-cover">
+            <div class="content-block-title">NOTIFICACIONES</div>
+            <div class="list-block media-list" id="panel_not">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title" style="text-transform:capitalize;">Titulo de la Notificacion</div>
+                                        <!-- <div class="item-after">AFTER</div> -->
+                                    </div>
+                                    <div class="item-subtitle">Algun otro Dato</div>
+                                    <div class="item-text">Descripcion de la notificacion</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title" style="text-transform:capitalize;">Titulo de la Notificacion</div>
+                                        <!-- <div class="item-after">AFTER</div> -->
+                                    </div>
+                                    <div class="item-subtitle">Algun otro Dato</div>
+                                    <div class="item-text">Descripcion de la notificacion</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title" style="text-transform:capitalize;">Titulo de la Notificacion</div>
+                                        <!-- <div class="item-after">AFTER</div> -->
+                                    </div>
+                                    <div class="item-subtitle">Algun otro Dato</div>
+                                    <div class="item-text">Descripcion de la notificacion</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block"><a href="#" class="button button-raised button-fill color-red" onclick="BorrarNotificaciones()"><i class="fa fa-trash" aria-hidden="true"></i> Borrar</a></div>
+
+            
+        </div>
+        <div class="views">
+            <div class="view view-main">
+                <div class="pages navbar-fixed">
+                    <div data-page="splash-screen" class="page no-navbar">
+                        <!-- Begin: Page Content -->
+                        <div class="page-content">
+                            <div class="content-block" style="width: 100%; text-align: center; position: absolute; top: 30%">
+                                <img src="img/logo.png" width="20%" class="logo_"><br>
+                                <h1>Arregla Numeros</h1>
+                                <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <!-- End: Page Content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="vendor/jquery/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="vendor/framework7/js/framework7.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/pages.js"></script>
+        <script type="text/javascript">
+            'use strict';
+
+            (function() {
+                myApp.init();
+            })();
+            $(document).ready(function(e){
+                // onDeviceReady(); 
+            });
+        </script>
+    </body>
+</html> 
+
